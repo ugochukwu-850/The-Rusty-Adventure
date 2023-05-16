@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+        "jinxdash.prettier-rust",
+        "rust-lang.rust-analyzer"
+    ]
+}
