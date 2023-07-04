@@ -1,0 +1,15 @@
+<head>
+  <link rel="stylesheet" href="section.css">
+</head>
+<div class="gallery">
+   
+        {% for asset in section.assets -%}
+          {%- if asset is matching("[.](jpg|png|jpeg)$") -%}
+            {% set image = resize_image(path=asset, width=240, height=180) %}
+            <a href="{{ get_url(path=asset) }}" target="_blank">
+              <img src="{{ image.url }}" />
+            </a>
+          {%- endif %}
+        {%- endfor %}
+
+</div>
